@@ -2,9 +2,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { Menu, X, Github, Linkedin } from 'lucide-react';
 import { fadeInDown } from '../utils/animation';
+import useActiveSection from '../utils/useActiveSection';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const sectionIds = ['home', 'about', 'skills', 'projects', 'contact'];
+  const activeSection = useActiveSection(sectionIds);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -64,8 +67,10 @@ const Header = () => {
                 >
                   <a 
                     href={link.href}
-                    onClick={() => scrollToSection(link.href)}
-                    className="navbar text-indigo-100 font-medium text-lg transition-colors hover:text-white hover:shadow-lg px-3 py-2"
+                    onClick={() => scrollToSection(link.href.replace('#', ''))}
+                    className={`navbar text-indigo-100 font-medium text-lg transition-colors hover:text-white hover:shadow-lg px-3 py-2 ${
+                      activeSection === link.href.replace('#', '') ? 'active' : ''
+                    }`}
                   >
                     {link.name}
                   </a>
@@ -129,7 +134,9 @@ const Header = () => {
                   >
                     <a
                       href={link.href}
-                      className="navbar text-white hover:text-indigo-100 font-medium transition-all"
+                      className={`navbar text-white hover:text-indigo-100 font-medium transition-all ${
+                        activeSection === link.href.replace('#', '') ? 'active' : ''
+                      }`}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {link.name}

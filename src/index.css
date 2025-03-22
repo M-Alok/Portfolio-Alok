@@ -58,6 +58,14 @@
   .navbar:hover::after {
     @apply w-[100%];
   }
+
+  .navbar.active {
+    @apply text-white brightness-125;
+  }
+
+  .navbar.active::after {
+    @apply w-[100%];
+  }
 }
 
 /* Custom scrollbar for modal */
