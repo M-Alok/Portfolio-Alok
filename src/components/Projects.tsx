@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { staggerContainer, scaleIn, fadeInUp } from "../utils/animation";
 import ChatMe from '../assets/ChatMe.png';
 import StudyBud from '../assets/StudyBud.png';
+import Streamify from '../assets/Streamify.png'
 import { ExternalLink, Github, X } from 'lucide-react';
 
 const Projects = () => {
@@ -12,6 +13,25 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: 'Streamify (Video Streaming Platform)',
+      description: 'Streamify is a modern video streaming platform that allows users to watch, upload, and share videos with a clean, user-friendly interface using GetStream.io. Also it has User authentication and profile management with 32 Unique UI Themes.',
+      image: Streamify,
+      category: 'web',
+      technologies: ['React JS', 'Node JS', 'Express JS', 'MongoDB', 'Tailwind CSS'],
+      liveLink: 'https://streamify-81ow.onrender.com/',
+      githubLink: 'https://github.com/M-Alok/Streamify',
+      problem: 'Limited platforms for creators to share videos with customization and community engagement.',
+      solution: 'Streamify provides a user-friendly platform for video uploading, streaming, and community interaction.',
+      keyFeatures: [
+        '1-on-1 and Group Video Calls with Screen Sharing & Recording',
+        'Real-time Messaging with Typing Indicators & Reactions using GetStream.io',
+        'JWT Authentication & Protected Routes, language Exchange Platform with 32 Unique UI Themes',
+        'Global State Management with Zustand',
+      ],
+      impact: 'Empowers creators to share content seamlessly, fostering community engagement and digital expression.',
+    },
+    {
+      id: 2,
       title: 'Real-time Chat Application',
       description: 'A real-time chat application using the MERN stack with Socket.io for instant messaging. Zustand manages state efficiently. Cloudinary handles media uploads for profile pictures and shared images.',
       image: ChatMe,
@@ -30,7 +50,7 @@ const Projects = () => {
       impact: 'Improves communication efficiency and user engagement through a responsive and feature-rich chat platform',
     },
     {
-      id: 2,
+      id: 3,
       title: 'StudyBud (Social Learning Platform)',
       description: 'StudyBud is a web-based platform built using Django, designed to help students collaborate and engage in discussions. It allows users to create study rooms, join discussions, and interact with other learners.',
       image: StudyBud,
