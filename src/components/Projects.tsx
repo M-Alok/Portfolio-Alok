@@ -5,6 +5,7 @@ import ChatMe from '../assets/ChatMe.png';
 import StudyBud from '../assets/StudyBud.png';
 import Streamify from '../assets/Streamify.png';
 import ExpenseTracker from '../assets/ExpenseTracker.png';
+import Fitnest from '../assets/Fitnest.jpg';
 import { ExternalLink, Github, X } from 'lucide-react';
 
 const Projects = () => {
@@ -87,6 +88,24 @@ const Projects = () => {
         'Intuitive dashboard for financial overview',
       ],
       impact: 'Empowers users to manage their finances effectively and make informed budgeting decisions',
+    },
+    {
+      id: 5,
+      title: 'Fitnest',
+      description: 'A mobile app built using Flutter that helps users track their fitness activities, set goals, and monitor progress with an intuitive interface and seamless user experience.',
+      image: Fitnest,
+      category: 'mobile',
+      technologies: ['Flutter', 'Dart'],
+      githubLink: 'https://github.com/M-Alok/Fitnest',
+      problem: 'Limited mobile solutions for comprehensive fitness tracking and goal setting',
+      solution: 'A mobile app that allows users to track fitness activities, set goals, and monitor progress',
+      keyFeatures: [
+        'Activity tracking with detailed statistics',
+        'Goal setting and progress monitoring',
+        'User-friendly interface with seamless navigation',
+        'Integration with device sensors for accurate data',
+      ],
+      impact: 'Promotes healthier lifestyles by providing users with tools to track and achieve their fitness goals effectively',
     },
   ];
 
@@ -190,15 +209,17 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="flex justify-between">
-                  <a 
-                    href={project.liveLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-indigo-400 hover:text-indigo-300 inline-flex items-center"
-                  >
-                    Live Demo
-                    <ExternalLink size={16} className="ml-1" />
-                  </a>
+                  {project.liveLink &&  (
+                    <a 
+                      href={project.liveLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-indigo-400 hover:text-indigo-300 inline-flex items-center"
+                    >
+                      Live Demo
+                      <ExternalLink size={16} className="ml-1" />
+                    </a>
+                  )}
                   <a 
                     href={project.githubLink} 
                     target="_blank" 
@@ -272,14 +293,16 @@ const Projects = () => {
                 >
                   View Code <Github size={16} className="ml-2" />
                 </a>
-                <a
-                  href={selectedProject.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-500 inline-flex items-center"
-                >
-                  Live Demo <ExternalLink size={16} className="ml-2" />
-                </a>
+                {selectedProject.liveLink && (
+                  <a
+                    href={selectedProject.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-500 inline-flex items-center"
+                  >
+                    Live Demo <ExternalLink size={16} className="ml-2" />
+                  </a>
+                )}
               </div>
             </motion.div>
           </motion.div>

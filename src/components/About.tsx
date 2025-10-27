@@ -4,8 +4,8 @@ import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer, scaleIn } from '..
 
 const About = () => {
   const stats = [
-    { value: '6', label: 'Months of Internship' },
-    { value: '3+', label: 'Projects Completed' },
+    { value: '1', label: 'Year of Experience' },
+    { value: '5+', label: 'Projects Completed' },
   ];
 
   return (
