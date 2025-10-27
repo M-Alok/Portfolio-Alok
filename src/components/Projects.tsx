@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { staggerContainer, scaleIn, fadeInUp } from "../utils/animation";
 import ChatMe from '../assets/ChatMe.png';
 import StudyBud from '../assets/StudyBud.png';
-import Streamify from '../assets/Streamify.png'
+import Streamify from '../assets/Streamify.png';
+import ExpenseTracker from '../assets/ExpenseTracker.png';
 import { ExternalLink, Github, X } from 'lucide-react';
 
 const Projects = () => {
@@ -67,6 +68,25 @@ const Projects = () => {
         'Search functionality for easy navigation of rooms and topics',
       ],
       impact: 'Enhances student collaboration and knowledge sharing through an interactive and organized platform',
+    },
+    {
+      id: 4,
+      title: 'Expense Tracker',
+      description: 'A personal finance/expense tracker where users can log daily expenses and incomes, categorize them, and generate monthly/weekly reports as downloadable PDFs.',
+      image: ExpenseTracker,
+      category: 'web',
+      technologies: ['Python', 'FastAPI', 'MySQL'],
+      liveLink: 'https://expense-tracker-eight-ivory-76.vercel.app',
+      githubLink: 'https://github.com/M-Alok/Expense-Tracker',
+      problem: 'Difficulty in tracking personal expenses and generating financial reports',
+      solution: 'A web application that allows users to log expenses, categorize them, and generate reports',
+      keyFeatures: [
+        'Expense and income logging with categorization',
+        'Monthly and weekly report generation as downloadable PDFs',
+        'User authentication and secure data storage',
+        'Intuitive dashboard for financial overview',
+      ],
+      impact: 'Empowers users to manage their finances effectively and make informed budgeting decisions',
     },
   ];
 
