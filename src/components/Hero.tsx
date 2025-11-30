@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import profile from '../assets/profile.jpg';
-import CV from '../assets/Alok.pdf';
+import CV from '../assets/M_Alok.pdf';
 import { ArrowRightIcon } from 'lucide-react';
 import AboutArrow from './AboutArrow';
 import {
